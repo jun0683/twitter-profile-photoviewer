@@ -7,6 +7,7 @@
 //
 
 #import "instagramViewController.h"
+#import "InstagramView.h"
 
 @implementation instagramViewController
 
@@ -20,25 +21,27 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-*/
+	self.view;
+	
+	instagramView = [[InstagramView alloc] initWithFrame:self.view.bounds];
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	[self.view addSubview:instagramView];
+	
+	[NSTimer scheduledTimerWithTimeInterval:1 target:instagramView selector:@selector(insertNewImage:) userInfo:nil repeats:YES];
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return YES;
+    NSLog(@"shouldAutorotateToInterfaceOrientation %@",self.view);
+	NSLog(@"%@",NSStringFromCGRect(self.view.bounds));
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
+
 
 @end

@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class InstagramView;
+
 @interface instagramViewController : UIViewController
+{
+	InstagramView *instagramView;
+}
 
 @end

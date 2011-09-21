@@ -16,6 +16,7 @@
 		D30A99FB1429D1F10000AE6D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30A99F91429D1F10000AE6D /* MainWindow.xib */; };
 		D30A99FE1429D1F10000AE6D /* instagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A99FD1429D1F10000AE6D /* instagramViewController.m */; };
 		D30A9A011429D1F10000AE6D /* instagramViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30A99FF1429D1F10000AE6D /* instagramViewController.xib */; };
+		D30A9A091429D36F0000AE6D /* instagramView.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A9A081429D36F0000AE6D /* instagramView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +24,18 @@
 		D30A99E71429D1F00000AE6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D30A99E91429D1F00000AE6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D30A99EB1429D1F00000AE6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D30A99EF1429D1F10000AE6D /* instagram-Info.plist */ = {isa = PBXFileReference; path = "instagram-Info.plist"; sourceTree = "<group>"; };
+		D30A99EF1429D1F10000AE6D /* instagram-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "instagram-Info.plist"; sourceTree = "<group>"; };
 		D30A99F11429D1F10000AE6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D30A99F31429D1F10000AE6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D30A99F51429D1F10000AE6D /* instagram-Prefix.pch */ = {isa = PBXFileReference; path = "instagram-Prefix.pch"; sourceTree = "<group>"; };
-		D30A99F61429D1F10000AE6D /* instagramAppDelegate.h */ = {isa = PBXFileReference; path = instagramAppDelegate.h; sourceTree = "<group>"; };
+		D30A99F51429D1F10000AE6D /* instagram-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "instagram-Prefix.pch"; sourceTree = "<group>"; };
+		D30A99F61429D1F10000AE6D /* instagramAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = instagramAppDelegate.h; sourceTree = "<group>"; };
 		D30A99F71429D1F10000AE6D /* instagramAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = instagramAppDelegate.m; sourceTree = "<group>"; };
 		D30A99FA1429D1F10000AE6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		D30A99FC1429D1F10000AE6D /* instagramViewController.h */ = {isa = PBXFileReference; path = instagramViewController.h; sourceTree = "<group>"; };
+		D30A99FC1429D1F10000AE6D /* instagramViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = instagramViewController.h; sourceTree = "<group>"; };
 		D30A99FD1429D1F10000AE6D /* instagramViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = instagramViewController.m; sourceTree = "<group>"; };
 		D30A9A001429D1F10000AE6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/instagramViewController.xib; sourceTree = "<group>"; };
+		D30A9A071429D36E0000AE6D /* instagramView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instagramView.h; sourceTree = "<group>"; };
+		D30A9A081429D36F0000AE6D /* instagramView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = instagramView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				D30A99F61429D1F10000AE6D /* instagramAppDelegate.h */,
 				D30A99F71429D1F10000AE6D /* instagramAppDelegate.m */,
 				D30A99F91429D1F10000AE6D /* MainWindow.xib */,
+				D30A9A071429D36E0000AE6D /* instagramView.h */,
+				D30A9A081429D36F0000AE6D /* instagramView.m */,
 				D30A99FC1429D1F10000AE6D /* instagramViewController.h */,
 				D30A99FD1429D1F10000AE6D /* instagramViewController.m */,
 				D30A99FF1429D1F10000AE6D /* instagramViewController.xib */,
@@ -164,6 +169,7 @@
 				D30A99F41429D1F10000AE6D /* main.m in Sources */,
 				D30A99F81429D1F10000AE6D /* instagramAppDelegate.m in Sources */,
 				D30A99FE1429D1F10000AE6D /* instagramViewController.m in Sources */,
+				D30A9A091429D36F0000AE6D /* instagramView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
