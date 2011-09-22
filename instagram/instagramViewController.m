@@ -48,7 +48,7 @@
 	_engine.consumerKey = kOAuthConsumerKey;
 	_engine.consumerSecret = kOAuthConsumerSecret;
 	
-	
+	userText = [[NSMutableSet alloc] init];
 	profileImageUrls = [[NSMutableSet alloc] init];
 	profileImages = [[NSMutableArray alloc] init];
 	profileImageRequstIdentifier = [[NSMutableDictionary alloc] init];
@@ -77,8 +77,9 @@
 {
 	if ([profileImageUrls count] < 10) 
 	{
-		[_engine getPublicTimeline];
+//		[_engine getPublicTimeline];
 //		[_engine getUpdate:];
+		[_engine getHomeTimelineSinceID:0 startingAtPage:0 count:200];
 	}
 }
 
@@ -144,11 +145,14 @@
 {
 	NSLog(@"%@",statuses);
 	for (NSDictionary *status in statuses) {
-		NSLog(@"%@",[[statuses valueForKey:@"user"] valueForKey:@"profile_image_url"]);
-		for (NSString* url in [[statuses valueForKey:@"user"] valueForKey:@"profile_image_url"]) {
-			[profileImageUrls addObject:url];
-		}
+		NSString* url =		[[status valueForKey:@"user"] valueForKey:@"profile_image_url"];
+		NSString* text = [status valueForKey:@"text"]; 
+		[profileImageUrls addObject:url];
+		[userText addObject:text];
+		
 	}
+	NSLog(@"profileImageUrls == %d",[profileImageUrls count]);
+	NSLog(@"userText == %d",[userText count]);
 	
 }
 
