@@ -16,7 +16,7 @@
 
 
 @implementation instagramViewController
-
+@synthesize profileImageUrls;
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -104,9 +104,7 @@
 - (void)newImageAdd
 {
 	if ([profileImages count]) {
-		NSLog(@"profileImageUrls count %d",[profileImageUrls count]);
-		NSLog(@"profileImageRequstIdentifier count %d",[profileImageRequstIdentifier count]);
-		NSLog(@"profileImage count %d",[profileImages count]);
+		
 		
 		
 		[instagramView insertNewImage:[profileImages lastObject]];
@@ -162,6 +160,10 @@
 	[profileImageUrls removeObject:[profileImageRequstIdentifier valueForKey:connectionIdentifier]];
 	[profileImageRequstIdentifier removeObjectForKey:connectionIdentifier];
 	[profileImages insertObject:image atIndex:0];
+	
+	NSLog(@"profileImageUrls count %d",[profileImageUrls count]);
+	NSLog(@"profileImageRequstIdentifier count %d",[profileImageRequstIdentifier count]);
+	NSLog(@"profileImage count %d",[profileImages count]);
 }
 
 

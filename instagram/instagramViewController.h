@@ -18,12 +18,13 @@
 {
 	InstagramView *instagramView;
 	SA_OAuthTwitterEngine				*_engine;
-	NSMutableSet *profileImageUrls;
+	
 	NSMutableSet *userText;
 	NSMutableArray *profileImages;
 	NSMutableDictionary *profileImageRequstIdentifier;
 }
 
+@property(retain)NSMutableSet *profileImageUrls;
 - (void)loadImageUrl;
 - (void)loadImage;
 - (void)newImageAdd;
