@@ -7,12 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SA_OAuthTwitterController.h"
+
+@class SA_OAuthTwitterEngine;
 
 @class InstagramView;
 
-@interface instagramViewController : UIViewController
+
+@interface instagramViewController : UIViewController <SA_OAuthTwitterControllerDelegate>
 {
 	InstagramView *instagramView;
+	SA_OAuthTwitterEngine				*_engine;
+	NSMutableArray *profileImageUrls;
+	NSMutableArray *profileImages;
 }
+
+- (void)loadImageUrl;
+- (void)loadImage;
+- (void)newImageAdd;
+
 
 @end

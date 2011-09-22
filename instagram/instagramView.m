@@ -7,6 +7,7 @@
 //
 
 #import "InstagramView.h"
+#import "instagramImageAnimationView.h"
 
 @interface UIColor(Random)
 +(UIColor *)randomColor;
@@ -30,7 +31,7 @@
     self = [super initWithFrame:frame];
     if (self) {
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
+		
 		for (int i = 0; i<6; i++) 
 		{
 			for (int j = 0; j<8; j++)
@@ -39,10 +40,14 @@
 				float height = self.bounds.size.height/6;
 				
 				CGRect viewframe = CGRectMake( j*width, i*height, width, height);
-				UIImageView *imageview = [[UIImageView alloc] initWithImage:[self imageWithColor:[UIColor randomColor]]];
-				[self addSubview:imageview];
-				[imageview setFrame:viewframe];
+				
+//				UIImageView *imageview = [[UIImageView alloc] initWithImage:[self imageWithColor:[UIColor randomColor]]];
+				InstagramImageAnimationView *imageview = [[InstagramImageAnimationView alloc] initWithFrame:viewframe];
+				[imageview setBackgroundColor:[UIColor redColor]];
+//				[imageview.newImageView setImage:[self imageWithrandomColor]];
 				imageview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+				[self addSubview:imageview];
+				
 				
 			}
 		}
@@ -73,14 +78,17 @@
 
 - (void)insertNewImage:(id)image
 {
+//	NSLog(@"%@",image);
 	int choiceviewindex = random()%[self.subviews count];
-	UIImageView *imageview = [self.subviews objectAtIndex:choiceviewindex];
+	InstagramImageAnimationView *imageview = [self.subviews objectAtIndex:choiceviewindex];
+	[imageview.newImageView setImage:image];
+	[imageview performTransition];
 	
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:3];
-	[UIView setAnimationCurve:UIViewAnimationCurveLinear];
-	[imageview setImage:[self imageWithrandomColor]];
-	[UIView commitAnimations];
+//	[UIView beginAnimations:nil context:nil];
+//	[UIView setAnimationDuration:3];
+//	[UIView setAnimationCurve:UIViewAnimationCurveLinear];
+//	[imageview setImage:[self imageWithrandomColor]];
+//	[UIView commitAnimations];
 	
 	
 }
