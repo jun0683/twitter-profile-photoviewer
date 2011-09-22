@@ -47,8 +47,11 @@
 	_engine = [[SA_OAuthTwitterEngine alloc] initOAuthWithDelegate: self];
 	_engine.consumerKey = kOAuthConsumerKey;
 	_engine.consumerSecret = kOAuthConsumerSecret;
-	profileImageUrls = [[NSMutableArray alloc] init];
+	
+	
+	profileImageUrls = [[NSMutableSet alloc] init];
 	profileImages = [[NSMutableArray alloc] init];
+	profileImageRequstIdentifier = [[NSMutableDictionary alloc] init];
 	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(newImageAdd) userInfo:nil repeats:YES];
 	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadImageUrl) userInfo:nil repeats:YES];
 	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadImage) userInfo:nil repeats:YES];
@@ -70,14 +73,6 @@
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
-- (void)newImageAdd
-{
-	if ([profileImages count]) {
-		[instagramView insertNewImage:[profileImages lastObject]];
-		[profileImages removeLastObject];
-	}
-}
-
 - (void)loadImageUrl
 {
 	if ([profileImageUrls count] < 10) 
@@ -90,11 +85,34 @@
 {
 	if ([profileImages count] < 10 && [profileImageUrls count]) 
 	{
+		
+		int i = 0;
 		for (NSString* url in profileImageUrls) {
-			[_engine getImageAtURL:url];
+			[profileImageRequstIdentifier setValue:url forKey:[_engine getImageAtURL:url]];
+			i++;
+			if (i>=10) {
+				break;
+			}
 		}
+		
 	}
 }
+
+
+- (void)newImageAdd
+{
+	if ([profileImages count]) {
+		NSLog(@"profileImageUrls count %d",[profileImageUrls count]);
+		NSLog(@"profileImageRequstIdentifier count %d",[profileImageRequstIdentifier count]);
+		NSLog(@"profileImage count %d",[profileImages count]);
+		
+		
+		[instagramView insertNewImage:[profileImages lastObject]];
+		[profileImages removeLastObject];
+	}
+}
+
+
 
 //=============================================================================================================================
 #pragma mark SA_OAuthTwitterEngineDelegate
@@ -110,23 +128,11 @@
 }
 
 //=============================================================================================================================
-#pragma mark SA_OAuthTwitterControllerDelegate
-- (void) OAuthTwitterController: (SA_OAuthTwitterController *) controller authenticatedWithUsername: (NSString *) username {
-	NSLog(@"Authenicated for %@", username);
-}
-
-- (void) OAuthTwitterControllerFailed: (SA_OAuthTwitterController *) controller {
-	NSLog(@"Authentication Failed!");
-}
-
-- (void) OAuthTwitterControllerCanceled: (SA_OAuthTwitterController *) controller {
-	NSLog(@"Authentication Canceled.");
-}
-
-//=============================================================================================================================
 #pragma mark TwitterEngineDelegate
 - (void) requestSucceeded: (NSString *) requestIdentifier {
-	NSLog(@"Request %@ succeeded", requestIdentifier);
+//	NSLog(@"Request %@ succeeded", requestIdentifier);
+	
+	
 }
 
 - (void) requestFailed: (NSString *) requestIdentifier withError: (NSError *) error {
@@ -135,8 +141,9 @@
 
 - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier
 {
+	NSLog(@"%@",statuses);
 	for (NSDictionary *status in statuses) {
-//		NSLog(@"%@",[[statuses valueForKey:@"user"] valueForKey:@"profile_image_url"]);
+		NSLog(@"%@",[[statuses valueForKey:@"user"] valueForKey:@"profile_image_url"]);
 		for (NSString* url in [[statuses valueForKey:@"user"] valueForKey:@"profile_image_url"]) {
 			[profileImageUrls addObject:url];
 		}
@@ -146,7 +153,9 @@
 
 - (void)imageReceived:(UIImage *)image forRequest:(NSString *)connectionIdentifier
 {
-//	NSLog(@"%@",image);
+	
+	[profileImageUrls removeObject:[profileImageRequstIdentifier valueForKey:connectionIdentifier]];
+	[profileImageRequstIdentifier removeObjectForKey:connectionIdentifier];
 	[profileImages insertObject:image atIndex:0];
 }
 

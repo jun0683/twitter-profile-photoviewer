@@ -18,8 +18,9 @@
 {
 	InstagramView *instagramView;
 	SA_OAuthTwitterEngine				*_engine;
-	NSMutableArray *profileImageUrls;
+	NSMutableSet *profileImageUrls;
 	NSMutableArray *profileImages;
+	NSMutableDictionary *profileImageRequstIdentifier;
 }
 
 - (void)loadImageUrl;
