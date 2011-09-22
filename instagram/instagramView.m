@@ -9,6 +9,9 @@
 #import "InstagramView.h"
 #import "instagramImageAnimationView.h"
 
+#define row 6
+#define column 8
+
 @interface UIColor(Random)
 +(UIColor *)randomColor;
 @end
@@ -32,19 +35,18 @@
     if (self) {
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 		
-		for (int i = 0; i<6; i++) 
+		for (int i = 0; i<row; i++) 
 		{
-			for (int j = 0; j<8; j++)
+			for (int j = 0; j<column; j++)
 			{
-				float width = self.bounds.size.width/8;
-				float height = self.bounds.size.height/6;
+				float width = self.bounds.size.width/column;
+				float height = self.bounds.size.height/row;
 				
 				CGRect viewframe = CGRectMake( j*width, i*height, width, height);
 				
-//				UIImageView *imageview = [[UIImageView alloc] initWithImage:[self imageWithColor:[UIColor randomColor]]];
+
 				InstagramImageAnimationView *imageview = [[InstagramImageAnimationView alloc] initWithFrame:viewframe];
 				[imageview setBackgroundColor:[UIColor redColor]];
-//				[imageview.newImageView setImage:[self imageWithrandomColor]];
 				imageview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 				[self addSubview:imageview];
 				
@@ -78,28 +80,14 @@
 
 - (void)insertNewImage:(id)image
 {
-//	NSLog(@"%@",image);
+
 	int choiceviewindex = random()%[self.subviews count];
 	InstagramImageAnimationView *imageview = [self.subviews objectAtIndex:choiceviewindex];
 	[imageview.newImageView setImage:image];
 	[imageview performTransition];
 	
-//	[UIView beginAnimations:nil context:nil];
-//	[UIView setAnimationDuration:3];
-//	[UIView setAnimationCurve:UIViewAnimationCurveLinear];
-//	[imageview setImage:[self imageWithrandomColor]];
-//	[UIView commitAnimations];
 	
 	
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

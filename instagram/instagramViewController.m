@@ -78,6 +78,7 @@
 	if ([profileImageUrls count] < 10) 
 	{
 		[_engine getPublicTimeline];
+		[_engine getUpdate:];
 	}
 }
 
