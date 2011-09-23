@@ -5,7 +5,7 @@
 //  Created by kim hongjun on 11. 9. 21..
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
-#define TRANSITION_DURATION 0.75
+#define TRANSITION_DURATION 0.1
 #import "InstagramImageAnimationView.h"
 @interface UIColor(Random)
 +(UIColor *)randomColor;
@@ -147,6 +147,11 @@
 	newImageView = originImageView;
 	originImageView = tmp;
 	NSLog(@"after %@",self.subviews);
+}
+
+- (BOOL)isAnimation
+{
+	
 }
 
 @end
