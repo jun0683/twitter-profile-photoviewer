@@ -19,9 +19,9 @@
 @implementation UIColor(Random)
 +(UIColor *)randomColor
 {
-	CGFloat red =  (CGFloat)random()/(CGFloat)RAND_MAX;
-	CGFloat blue = (CGFloat)random()/(CGFloat)RAND_MAX;
-	CGFloat green = (CGFloat)random()/(CGFloat)RAND_MAX;
+	CGFloat red =  (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+	CGFloat blue = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+	CGFloat green = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
 	return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
 }
 @end
@@ -77,11 +77,20 @@
 	
     return image;
 }
+- (void)insertNewImages:(NSArray*)images
+{
+	for (int i = 0; i<[self.subviews count]; i++) {
+		InstagramImageAnimationView *view = [self.subviews objectAtIndex:i];
+		[view.newImageView  setImage:[images objectAtIndex:i]];
+		[view performTransition];
+	}
+}
 
 - (void)insertNewImage:(id)image
 {
 
-	int choiceviewindex = random()%[self.subviews count];
+	
+	int choiceviewindex = arc4random()%[self.subviews count];
 	InstagramImageAnimationView *imageview = [self.subviews objectAtIndex:choiceviewindex];
 	[imageview.newImageView setImage:image];
 	[imageview performTransition];

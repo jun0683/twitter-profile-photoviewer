@@ -32,7 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+	firstTimeLoadImageUrl = YES;
+	firstTimeLoadImage = YES;
+	firstTimeinsertImage = YES;
 	
 	instagramView = [[InstagramView alloc] initWithFrame:self.view.bounds];
 	[self.view addSubview:instagramView];
@@ -52,9 +54,7 @@
 	profileImages = [[NSMutableArray alloc] init];
 	profileImageRequstIdentifier = [[NSMutableDictionary alloc] init];
 	
-	[NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(loadImageUrl) userInfo:nil repeats:YES];
-	[NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(loadImage) userInfo:nil repeats:YES];
-	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(setNewImageWithAnimation) userInfo:nil repeats:YES];
+	
 	
 	UIViewController			*controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
 	controller.modalPresentationStyle = UIModalPresentationPageSheet;
@@ -71,6 +71,27 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+}
+
+- (void)settingFirstTimeLoadImageUrl
+{
+	[_engine getHomeTimelineSinceID:0 startingAtPage:0 count:100];
+}
+
+- (void)settingFirstTimeLoadImage
+{
+	for (NSString* url in profileImageUrls) {
+		[profileImageRequstIdentifier setValue:url forKey:[_engine getImageAtURL:url]];
+	}
+}
+
+- (void)settingFistTimeImage
+{
+	[instagramView insertNewImages:profileImages];
+	[NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(loadImageUrl) userInfo:nil repeats:YES];
+	[NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(loadImage) userInfo:nil repeats:YES];
+	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(setNewImageWithAnimation) userInfo:nil repeats:YES];
+
 }
 
 - (void)loadImageUrl
@@ -144,6 +165,11 @@
 	}
 //	NSLog(@"profileImageUrls == %d",[profileImageUrls count]);
 	
+	if (firstTimeLoadImageUrl) {
+		firstTimeLoadImageUrl = NO;
+		[self settingFirstTimeLoadImage];
+	}
+	
 }
 
 - (void)imageReceived:(UIImage *)image forRequest:(NSString *)connectionIdentifier
@@ -156,6 +182,10 @@
 	NSLog(@"profileImageUrls count %d",[profileImageUrls count]);
 	NSLog(@"profileImageRequstIdentifier count %d",[profileImageRequstIdentifier count]);
 	NSLog(@"profileImage count %d",[profileImages count]);
+	if ([profileImageRequstIdentifier count] == 0 && firstTimeLoadImage) {
+		firstTimeLoadImage = NO;
+		[self settingFistTimeImage];
+	}
 }
 
 

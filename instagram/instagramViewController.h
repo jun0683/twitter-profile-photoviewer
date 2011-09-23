@@ -21,6 +21,10 @@
 	NSMutableSet *profileImageUrls;
 	NSMutableArray *profileImages;
 	NSMutableDictionary *profileImageRequstIdentifier;
+	
+	BOOL firstTimeLoadImageUrl;
+	BOOL firstTimeLoadImage;
+	BOOL firstTimeinsertImage;
 }
 
 @property(retain) NSMutableSet *profileImageUrls;
