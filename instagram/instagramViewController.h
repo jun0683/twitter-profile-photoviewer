@@ -27,7 +27,7 @@
 @property(retain) NSMutableArray *profileImages;
 - (void)loadImageUrl;
 - (void)loadImage;
-- (void)newImageAdd;
+- (void)setNewImageWithAnimation;
 
 
 @end

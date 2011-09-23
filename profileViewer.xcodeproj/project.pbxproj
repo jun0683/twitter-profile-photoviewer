@@ -19,7 +19,6 @@
 		D30A9A091429D36F0000AE6D /* instagramView.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A9A081429D36F0000AE6D /* instagramView.m */; };
 		D30A9A0C1429E9380000AE6D /* instagramImageAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A9A0B1429E9380000AE6D /* instagramImageAnimationView.m */; };
 		D30A9A0E1429F4F80000AE6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30A9A0D1429F4F80000AE6D /* QuartzCore.framework */; };
-		D30A9A14142A13BA0000AE6D /* Photo_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D30A9A13142A13BA0000AE6D /* Photo_3.jpg */; };
 		D3C3ACD6142B140A00CB7BC8 /* jQueryInject.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3C3AC9C142B140A00CB7BC8 /* jQueryInject.txt */; };
 		D3C3ACD7142B140A00CB7BC8 /* jQueryInjectLandscape.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3C3AC9D142B140A00CB7BC8 /* jQueryInjectLandscape.txt */; };
 		D3C3ACD8142B140A00CB7BC8 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C3AC9E142B140A00CB7BC8 /* libOAuth.a */; };
@@ -64,7 +63,6 @@
 		D30A9A0A1429E9380000AE6D /* instagramImageAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instagramImageAnimationView.h; sourceTree = "<group>"; };
 		D30A9A0B1429E9380000AE6D /* instagramImageAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = instagramImageAnimationView.m; sourceTree = "<group>"; };
 		D30A9A0D1429F4F80000AE6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D30A9A13142A13BA0000AE6D /* Photo_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Photo_3.jpg; sourceTree = "<group>"; };
 		D3C3AC9C142B140A00CB7BC8 /* jQueryInject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInject.txt; sourceTree = "<group>"; };
 		D3C3AC9D142B140A00CB7BC8 /* jQueryInjectLandscape.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInjectLandscape.txt; sourceTree = "<group>"; };
 		D3C3AC9E142B140A00CB7BC8 /* libOAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOAuth.a; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 		D30A99ED1429D1F00000AE6D /* instagram */ = {
 			isa = PBXGroup;
 			children = (
-				D30A9A13142A13BA0000AE6D /* Photo_3.jpg */,
 				D30A99F61429D1F10000AE6D /* instagramAppDelegate.h */,
 				D30A99F71429D1F10000AE6D /* instagramAppDelegate.m */,
 				D30A99F91429D1F10000AE6D /* MainWindow.xib */,
@@ -348,7 +345,6 @@
 				D30A99F21429D1F10000AE6D /* InfoPlist.strings in Resources */,
 				D30A99FB1429D1F10000AE6D /* MainWindow.xib in Resources */,
 				D30A9A011429D1F10000AE6D /* instagramViewController.xib in Resources */,
-				D30A9A14142A13BA0000AE6D /* Photo_3.jpg in Resources */,
 				D3C3ACD6142B140A00CB7BC8 /* jQueryInject.txt in Resources */,
 				D3C3ACD7142B140A00CB7BC8 /* jQueryInjectLandscape.txt in Resources */,
 				D3C3ACE9142B140B00CB7BC8 /* twitter_load.png in Resources */,

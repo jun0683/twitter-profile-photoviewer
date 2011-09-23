@@ -71,6 +71,7 @@
 - (void)fadeAni
 {
 	// Set alpha value to 0 initially:
+	[self bringSubviewToFront:newImageView];
 	[newImageView setAlpha:0.0];
 	[originImageView setAlpha:1.0];
 	
@@ -79,13 +80,16 @@
 		[newImageView setAlpha:1.0];
 		[originImageView setAlpha:0.0];
 	} completion:^(BOOL finished) {
+		[newImageView setAlpha:1.0];
+		[originImageView setAlpha:1.0];
 		[self animationDid];
+		
 	}];
 	
 }
 
 - (void)TransImageAnimation:(CGRect)Frame  {
-//	NSLog(@"%@",self.subviews);
+	
 	[UIView animateWithDuration:TRANSITION_DURATION delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^(void) 
 	 {
 		 [newImageView setFrame:Frame];

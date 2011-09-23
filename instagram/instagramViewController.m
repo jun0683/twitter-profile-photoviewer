@@ -52,9 +52,9 @@
 	profileImages = [[NSMutableArray alloc] init];
 	profileImageRequstIdentifier = [[NSMutableDictionary alloc] init];
 	
-	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadImageUrl) userInfo:nil repeats:YES];
-	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadImage) userInfo:nil repeats:YES];
-	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(newImageAdd) userInfo:nil repeats:YES];
+	[NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(loadImageUrl) userInfo:nil repeats:YES];
+	[NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(loadImage) userInfo:nil repeats:YES];
+	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(setNewImageWithAnimation) userInfo:nil repeats:YES];
 	
 	UIViewController			*controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
 	controller.modalPresentationStyle = UIModalPresentationPageSheet;
@@ -90,7 +90,7 @@
 		for (NSString* url in profileImageUrls) {
 			[profileImageRequstIdentifier setValue:url forKey:[_engine getImageAtURL:url]];
 			i++;
-			if (i>=10) {
+			if (i>=50) {
 				break;
 			}
 		}
@@ -99,7 +99,7 @@
 }
 
 
-- (void)newImageAdd
+- (void)setNewImageWithAnimation
 {
 	if ([profileImages count]) {
 		
