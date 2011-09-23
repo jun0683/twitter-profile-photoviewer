@@ -75,11 +75,9 @@
 
 - (void)loadImageUrl
 {
-	if ([profileImageUrls count] < 10) 
+	if ([profileImageUrls count] < 10 && [_engine isAuthorized]) 
 	{
-//		[_engine getPublicTimeline];
-//		[_engine getUpdate:];
-		[_engine getHomeTimelineSinceID:0 startingAtPage:0 count:200];
+		[_engine getHomeTimelineSinceID:0 startingAtPage:0 count:100];
 	}
 }
 
@@ -105,8 +103,6 @@
 {
 	if ([profileImages count]) {
 		
-		
-		
 		[instagramView insertNewImage:[profileImages lastObject]];
 		[profileImages removeLastObject];
 	}
@@ -117,8 +113,7 @@
 //=============================================================================================================================
 #pragma mark SA_OAuthTwitterEngineDelegate
 - (void) storeCachedTwitterOAuthData: (NSString *) data forUsername: (NSString *) username {
-	NSUserDefaults			*defaults = [NSUserDefaults standardUserDefaults];
-	
+	NSUserDefaults			*defaults = [NSUserDefaults standardUserDefaults];	
 	[defaults setObject: data forKey: @"authData"];
 	[defaults synchronize];
 }
@@ -130,7 +125,7 @@
 //=============================================================================================================================
 #pragma mark TwitterEngineDelegate
 - (void) requestSucceeded: (NSString *) requestIdentifier {
-//	NSLog(@"Request %@ succeeded", requestIdentifier);
+	//	NSLog(@"Request %@ succeeded", requestIdentifier);
 	
 	
 }
@@ -141,7 +136,7 @@
 
 - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier
 {
-	NSLog(@"%@",statuses);
+	//	NSLog(@"%@",statuses);
 	for (NSDictionary *status in statuses) {
 		NSString* url =		[[status valueForKey:@"user"] valueForKey:@"profile_image_url"];
 		NSString* text = [status valueForKey:@"text"]; 
