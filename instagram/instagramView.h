@@ -14,6 +14,5 @@
 }
 - (UIImage*)imageWithrandomColor;
 - (UIImage *)imageWithColor:(UIColor *)color;
-- (void)insertNewImages:(NSArray*)images;
 - (void)insertNewImage:(id)image;
 @end

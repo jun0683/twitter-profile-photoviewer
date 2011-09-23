@@ -14,9 +14,9 @@
 @implementation UIColor(Random)
 +(UIColor *)randomColor
 {
-	CGFloat red =  (CGFloat)arc4random()/(CGFloat)RAND_MAX;
-	CGFloat blue = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
-	CGFloat green = (CGFloat)arc4random()/(CGFloat)RAND_MAX;
+	CGFloat red =  (CGFloat)random()/(CGFloat)RAND_MAX;
+	CGFloat blue = (CGFloat)random()/(CGFloat)RAND_MAX;
+	CGFloat green = (CGFloat)random()/(CGFloat)RAND_MAX;
 	return [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
 }
 @end
@@ -140,7 +140,7 @@
 -(void)performTransition
 {
 	SEL array[] = {@selector(fadeAni),@selector(leftinAni),@selector(rightinAni),@selector(topinAni),@selector(bottominAni)};
-	SEL message = array[arc4random()%5];
+	SEL message = array[random()%5];
 	[self performSelector:message];
 }
 
