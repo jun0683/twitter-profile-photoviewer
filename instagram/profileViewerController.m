@@ -1,13 +1,13 @@
 //
-//  instagramViewController.m
-//  instagram
+//  profileViewerViewController.m
+//  profileViewer
 //
 //  Created by kim hongjun on 11. 9. 21..
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
 
 #import "profileViewerController.h"
-#import "InstagramView.h"
+#import "profileViewerView.h"
 #import "SA_OAuthTwitterEngine.h"
 
 
@@ -36,8 +36,8 @@
 	firstTimeLoadImage = YES;
 	firstTimeinsertImage = YES;
 	
-	instagramView = [[profileViewerView alloc] initWithFrame:self.view.bounds];
-	[self.view addSubview:instagramView];
+	profileviewerView = [[profileViewerView alloc] initWithFrame:self.view.bounds];
+	[self.view addSubview:profileviewerView];
 	
 }
 
@@ -87,7 +87,7 @@
 
 - (void)settingFistTimeImage
 {
-	[instagramView insertNewImages:profileImages];
+	[profileviewerView insertNewImages:profileImages];
 	[NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(loadImageUrl) userInfo:nil repeats:YES];
 	[NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(loadImage) userInfo:nil repeats:YES];
 	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(setNewImageWithAnimation) userInfo:nil repeats:YES];
@@ -124,7 +124,7 @@
 {
 	if ([profileImages count]) {
 		
-		[instagramView insertNewImage:[profileImages lastObject]];
+		[profileviewerView insertNewImage:[profileImages lastObject]];
 		[profileImages removeLastObject];
 	}
 }
@@ -157,13 +157,12 @@
 
 - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier
 {
-//	NSLog(@"%@",statuses);
+
 	for (NSDictionary *status in statuses) {
 		NSString* url =	[[status valueForKey:@"user"] valueForKey:@"profile_image_url"];
 		[profileImageUrls addObject:url];
 		
 	}
-//	NSLog(@"profileImageUrls == %d",[profileImageUrls count]);
 	
 	if (firstTimeLoadImageUrl) {
 		firstTimeLoadImageUrl = NO;
@@ -179,9 +178,6 @@
 	[profileImageRequstIdentifier removeObjectForKey:connectionIdentifier];
 	[profileImages insertObject:image atIndex:0];
 	
-	NSLog(@"profileImageUrls count %d",[profileImageUrls count]);
-	NSLog(@"profileImageRequstIdentifier count %d",[profileImageRequstIdentifier count]);
-	NSLog(@"profileImage count %d",[profileImages count]);
 	if ([profileImageRequstIdentifier count] == 0 && firstTimeLoadImage) {
 		firstTimeLoadImage = NO;
 		[self settingFistTimeImage];
