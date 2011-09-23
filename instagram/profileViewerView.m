@@ -1,13 +1,13 @@
 //
-//  instagramView.m
-//  instagram
+//  profileViewerView.m
+//  profileViewer
 //
 //  Created by kim hongjun on 11. 9. 21..
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
 
-#import "InstagramView.h"
-#import "instagramImageAnimationView.h"
+#import "profileViewerView.h"
+#import "profileViewerImageAnimationView.h"
 
 #define row 6
 #define column 8

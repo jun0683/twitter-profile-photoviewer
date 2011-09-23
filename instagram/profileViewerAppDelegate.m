@@ -1,15 +1,15 @@
 //
-//  instagramAppDelegate.m
-//  instagram
+//  profileViewerAppDelegate.m
+//  profileViewer
 //
 //  Created by kim hongjun on 11. 9. 21..
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
 
-#import "instagramAppDelegate.h"
+#import "profileViewerAppDelegate.h"
 #import "profileViewerController.h"
 
-@implementation instagramAppDelegate
+@implementation profileViewerAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;

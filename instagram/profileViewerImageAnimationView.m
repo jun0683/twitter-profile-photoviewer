@@ -1,12 +1,12 @@
 //
-//  instagramImageAnimationView.m
-//  instagram
+//  profileViewerImageAnimationView.m
+//  profileViewer
 //
 //  Created by kim hongjun on 11. 9. 21..
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
 #define TRANSITION_DURATION 0.75
-#import "InstagramImageAnimationView.h"
+#import "profileViewerImageAnimationView.h"
 @interface UIColor(Random)
 +(UIColor *)randomColor;
 @end
