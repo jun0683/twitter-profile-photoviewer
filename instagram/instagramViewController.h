@@ -23,7 +23,8 @@
 	NSMutableDictionary *profileImageRequstIdentifier;
 }
 
-@property(retain)NSMutableSet *profileImageUrls;
+@property(retain) NSMutableSet *profileImageUrls;
+@property(retain) NSMutableArray *profileImages;
 - (void)loadImageUrl;
 - (void)loadImage;
 - (void)newImageAdd;

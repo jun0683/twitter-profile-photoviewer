@@ -82,19 +82,25 @@
 	
 }
 
+- (void)TransImageAnimation:(CGRect)Frame  {
+//	NSLog(@"%@",self.subviews);
+	[UIView animateWithDuration:TRANSITION_DURATION delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^(void) 
+	 {
+		 [newImageView setFrame:Frame];
+		 
+	 } completion:^(BOOL finished) {
+		 [self animationDid];
+	 }];
+	
+}
+
 - (void)leftinAni
 {
 	[self bringSubviewToFront:newImageView];
 	CGRect Frame = newImageView.frame;
 	[newImageView setFrame:CGRectMake(Frame.origin.x-Frame.size.width,Frame.origin.y,Frame.size.width , Frame.size.height)];
 	
-	[UIView animateWithDuration:TRANSITION_DURATION delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^(void) 
-	{
-		[newImageView setFrame:Frame];
-		
-	} completion:^(BOOL finished) {
-		[self animationDid];
-	}];
+	[self TransImageAnimation: Frame];
 }
 
 - (void)rightinAni
@@ -103,13 +109,7 @@
 	CGRect Frame = newImageView.frame;
 	[newImageView setFrame:CGRectMake(Frame.origin.x+Frame.size.width,Frame.origin.y,Frame.size.width , Frame.size.height)];
 	
-	[UIView animateWithDuration:TRANSITION_DURATION delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^(void) 
-	 {
-		 [newImageView setFrame:Frame];
-		 
-	 } completion:^(BOOL finished) {
-		 [self animationDid];
-	 }];
+	[self TransImageAnimation: Frame];
 }
 
 - (void)topinAni
@@ -118,13 +118,7 @@
 	CGRect Frame = newImageView.frame;
 	[newImageView setFrame:CGRectMake(Frame.origin.x,Frame.origin.y-Frame.size.height,Frame.size.width , Frame.size.height)];
 	
-	[UIView animateWithDuration:TRANSITION_DURATION delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^(void) 
-	 {
-		 [newImageView setFrame:Frame];
-		 
-	 } completion:^(BOOL finished) {
-		 [self animationDid];
-	 }];
+	[self TransImageAnimation: Frame];
 }
 
 - (void)bottominAni
@@ -133,28 +127,26 @@
 	CGRect Frame = newImageView.frame;
 	[newImageView setFrame:CGRectMake(Frame.origin.x,Frame.origin.y+Frame.size.height,Frame.size.width , Frame.size.height)];
 	
-	[UIView animateWithDuration:TRANSITION_DURATION delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^(void) 
-	 {
-		 [newImageView setFrame:Frame];
-		 
-	 } completion:^(BOOL finished) {
-		 [self animationDid];
-	 }];
+	[self TransImageAnimation: Frame];
 }
 
 
 -(void)performTransition
 {
 	SEL array[] = {@selector(fadeAni),@selector(leftinAni),@selector(rightinAni),@selector(topinAni),@selector(bottominAni)};
-	SEL message = array[random()%5];
+	SEL message = array[random()%4+1];
 	[self performSelector:message];
 }
 
 -(void)animationDid
 {
+//	[newImageView setAlpha:1.0];
+//	[originImageView setAlpha:1.0];
+	NSLog(@"before %@",self.subviews);
 	UIImageView *tmp = newImageView;
 	newImageView = originImageView;
 	originImageView = tmp;
+	NSLog(@"after %@",self.subviews);
 }
 
 @end

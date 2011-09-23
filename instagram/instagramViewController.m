@@ -16,7 +16,7 @@
 
 
 @implementation instagramViewController
-@synthesize profileImageUrls;
+@synthesize profileImageUrls,profileImages;
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -51,9 +51,10 @@
 	profileImageUrls = [[NSMutableSet alloc] init];
 	profileImages = [[NSMutableArray alloc] init];
 	profileImageRequstIdentifier = [[NSMutableDictionary alloc] init];
-	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(newImageAdd) userInfo:nil repeats:YES];
+	
 	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadImageUrl) userInfo:nil repeats:YES];
 	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadImage) userInfo:nil repeats:YES];
+	[NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(newImageAdd) userInfo:nil repeats:YES];
 	
 	UIViewController			*controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
 	controller.modalPresentationStyle = UIModalPresentationPageSheet;
@@ -135,13 +136,13 @@
 
 - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier
 {
-	NSLog(@"%@",statuses);
+//	NSLog(@"%@",statuses);
 	for (NSDictionary *status in statuses) {
 		NSString* url =	[[status valueForKey:@"user"] valueForKey:@"profile_image_url"];
 		[profileImageUrls addObject:url];
 		
 	}
-	NSLog(@"profileImageUrls == %d",[profileImageUrls count]);
+//	NSLog(@"profileImageUrls == %d",[profileImageUrls count]);
 	
 }
 
