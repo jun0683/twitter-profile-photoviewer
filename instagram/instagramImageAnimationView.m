@@ -5,7 +5,7 @@
 //  Created by kim hongjun on 11. 9. 21..
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
-#define TRANSITION_DURATION 0.1
+#define TRANSITION_DURATION 0.75
 #import "InstagramImageAnimationView.h"
 @interface UIColor(Random)
 +(UIColor *)randomColor;
@@ -31,11 +31,13 @@
     if (self) {
 		self.clipsToBounds = YES;
 		newImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+		newImageView.backgroundColor = [UIColor whiteColor];
 		newImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 		[newImageView setImage:[self imageWithrandomColor]];
 		[self addSubview:newImageView];
 		
 		originImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+		originImageView.backgroundColor = [UIColor whiteColor];
 		originImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 		[originImageView setImage:[self imageWithrandomColor]];
         [self addSubview:originImageView];
@@ -134,24 +136,15 @@
 -(void)performTransition
 {
 	SEL array[] = {@selector(fadeAni),@selector(leftinAni),@selector(rightinAni),@selector(topinAni),@selector(bottominAni)};
-	SEL message = array[random()%4+1];
+	SEL message = array[random()%5];
 	[self performSelector:message];
 }
 
 -(void)animationDid
 {
-//	[newImageView setAlpha:1.0];
-//	[originImageView setAlpha:1.0];
-	NSLog(@"before %@",self.subviews);
 	UIImageView *tmp = newImageView;
 	newImageView = originImageView;
 	originImageView = tmp;
-	NSLog(@"after %@",self.subviews);
-}
-
-- (BOOL)isAnimation
-{
-	
 }
 
 @end

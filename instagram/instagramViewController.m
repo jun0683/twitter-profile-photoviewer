@@ -54,7 +54,7 @@
 	
 	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadImageUrl) userInfo:nil repeats:YES];
 	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(loadImage) userInfo:nil repeats:YES];
-	[NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(newImageAdd) userInfo:nil repeats:YES];
+	[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(newImageAdd) userInfo:nil repeats:YES];
 	
 	UIViewController			*controller = [SA_OAuthTwitterController controllerToEnterCredentialsWithTwitterEngine: _engine delegate: self];
 	controller.modalPresentationStyle = UIModalPresentationPageSheet;
