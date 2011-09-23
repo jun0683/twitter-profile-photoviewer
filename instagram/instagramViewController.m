@@ -48,7 +48,6 @@
 	_engine.consumerKey = kOAuthConsumerKey;
 	_engine.consumerSecret = kOAuthConsumerSecret;
 	
-	userText = [[NSMutableSet alloc] init];
 	profileImageUrls = [[NSMutableSet alloc] init];
 	profileImages = [[NSMutableArray alloc] init];
 	profileImageRequstIdentifier = [[NSMutableDictionary alloc] init];
@@ -136,16 +135,13 @@
 
 - (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier
 {
-	//	NSLog(@"%@",statuses);
+	NSLog(@"%@",statuses);
 	for (NSDictionary *status in statuses) {
-		NSString* url =		[[status valueForKey:@"user"] valueForKey:@"profile_image_url"];
-		NSString* text = [status valueForKey:@"text"]; 
+		NSString* url =	[[status valueForKey:@"user"] valueForKey:@"profile_image_url"];
 		[profileImageUrls addObject:url];
-		[userText addObject:text];
 		
 	}
 	NSLog(@"profileImageUrls == %d",[profileImageUrls count]);
-	NSLog(@"userText == %d",[userText count]);
 	
 }
 

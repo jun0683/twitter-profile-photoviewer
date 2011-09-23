@@ -10,7 +10,6 @@
 #import "SA_OAuthTwitterController.h"
 
 @class SA_OAuthTwitterEngine;
-
 @class InstagramView;
 
 
@@ -19,7 +18,7 @@
 	InstagramView *instagramView;
 	SA_OAuthTwitterEngine				*_engine;
 	
-	NSMutableSet *userText;
+	NSMutableSet *profileImageUrls;
 	NSMutableArray *profileImages;
 	NSMutableDictionary *profileImageRequstIdentifier;
 }
