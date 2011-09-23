@@ -10,12 +10,12 @@
 #import "SA_OAuthTwitterController.h"
 
 @class SA_OAuthTwitterEngine;
-@class InstagramView;
+@class profileViewerView;
 
 
-@interface instagramViewController : UIViewController <SA_OAuthTwitterControllerDelegate>
+@interface profileViewerController : UIViewController <SA_OAuthTwitterControllerDelegate>
 {
-	InstagramView *instagramView;
+	profileViewerView *instagramView;
 	SA_OAuthTwitterEngine				*_engine;
 	
 	NSMutableSet *profileImageUrls;

@@ -6,7 +6,7 @@
 //  Copyright 2011년 __MyCompanyName__. All rights reserved.
 //
 
-#import "instagramViewController.h"
+#import "profileViewerController.h"
 #import "InstagramView.h"
 #import "SA_OAuthTwitterEngine.h"
 
@@ -15,7 +15,7 @@
 #define kOAuthConsumerSecret			@"MCsFJV5VYh1VaddJDakulaE1HngtgWJsC6PnbfLkQ0"		//REPLACE ME
 
 
-@implementation instagramViewController
+@implementation profileViewerController
 @synthesize profileImageUrls,profileImages;
 - (void)didReceiveMemoryWarning
 {
@@ -36,7 +36,7 @@
 	firstTimeLoadImage = YES;
 	firstTimeinsertImage = YES;
 	
-	instagramView = [[InstagramView alloc] initWithFrame:self.view.bounds];
+	instagramView = [[profileViewerView alloc] initWithFrame:self.view.bounds];
 	[self.view addSubview:instagramView];
 	
 }
