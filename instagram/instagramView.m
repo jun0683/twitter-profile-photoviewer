@@ -26,7 +26,7 @@
 }
 @end
 
-@implementation InstagramView
+@implementation profileViewerView
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -45,7 +45,7 @@
 				CGRect viewframe = CGRectMake( j*width, i*height, width, height);
 				
 
-				InstagramImageAnimationView *imageview = [[InstagramImageAnimationView alloc] initWithFrame:viewframe];
+				profileViewerImageAnimationView *imageview = [[profileViewerImageAnimationView alloc] initWithFrame:viewframe];
 				[imageview setBackgroundColor:[UIColor redColor]];
 				imageview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 				[self addSubview:imageview];
@@ -80,7 +80,7 @@
 - (void)insertNewImages:(NSArray*)images
 {
 	for (int i = 0; i<[self.subviews count]; i++) {
-		InstagramImageAnimationView *view = [self.subviews objectAtIndex:i];
+		profileViewerImageAnimationView *view = [self.subviews objectAtIndex:i];
 		[view.newImageView  setImage:[images objectAtIndex:i]];
 		[view performTransition];
 	}
@@ -91,7 +91,7 @@
 
 	
 	int choiceviewindex = arc4random()%[self.subviews count];
-	InstagramImageAnimationView *imageview = [self.subviews objectAtIndex:choiceviewindex];
+	profileViewerImageAnimationView *imageview = [self.subviews objectAtIndex:choiceviewindex];
 	[imageview.newImageView setImage:image];
 	[imageview performTransition];
 	

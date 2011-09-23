@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface InstagramImageAnimationView : UIView
+@interface profileViewerImageAnimationView : UIView
 {
 	UIImageView *originImageView;
 	UIImageView *newImageView;

@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class instagramViewController;
+@class profileViewerController;
 
 @interface instagramAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet instagramViewController *viewController;
+@property (nonatomic, retain) IBOutlet profileViewerController *viewController;
 
 @end

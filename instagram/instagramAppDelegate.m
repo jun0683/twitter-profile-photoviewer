@@ -7,7 +7,7 @@
 //
 
 #import "instagramAppDelegate.h"
-#import "instagramViewController.h"
+#import "profileViewerController.h"
 
 @implementation instagramAppDelegate
 

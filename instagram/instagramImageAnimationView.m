@@ -21,7 +21,7 @@
 }
 @end
 
-@implementation InstagramImageAnimationView
+@implementation profileViewerImageAnimationView
 
 @synthesize newImageView;
 
