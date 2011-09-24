@@ -11,8 +11,8 @@
 #import "SA_OAuthTwitterEngine.h"
 
 
-#define kOAuthConsumerKey				@"9Ys4WJXwgmkgmm8xdA19sw"		//REPLACE ME
-#define kOAuthConsumerSecret			@"MCsFJV5VYh1VaddJDakulaE1HngtgWJsC6PnbfLkQ0"		//REPLACE ME
+#define kOAuthConsumerKey				@"UG0kng3kD8HCd1uplUQAnw"		//REPLACE ME
+#define kOAuthConsumerSecret			@"Q0FmmKV47XjOnYTiiAPI8BW58jwWzWAUEf0Hc6KxM"		//REPLACE ME
 
 
 @implementation profileViewerController

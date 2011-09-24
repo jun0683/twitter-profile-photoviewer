@@ -68,6 +68,16 @@
 	return [self imageWithColor:[UIColor randomColor]];
 }
 
+
+
+-(void)changeImage
+{
+	SEL array[] = {@selector(fadeAni),@selector(leftinAni),@selector(rightinAni),@selector(topinAni),@selector(bottominAni),@selector(leftPushAni),@selector(rightPushAni),@selector(topPushAni),@selector(bottomPushAni)};
+	SEL message = array[arc4random()%9];
+	[self performSelector:message];
+}
+#pragma mark - fade
+
 - (void)fadeAni
 {
 	// Set alpha value to 0 initially:
@@ -88,8 +98,64 @@
 	
 }
 
-- (void)TransImageAnimation:(CGRect)Frame  {
+
+#pragma mark - push
+
+- (void)pushInAnimation:(CGRect)Frame  orginFrame:(CGRect)orginFrame
+{
+	[UIView animateWithDuration:TRANSITION_DURATION delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^(void) 
+	 {
+		 [newImageView setFrame:Frame];
+		 [originImageView setFrame:orginFrame];
+		 
+		 
+	 } completion:^(BOOL finished) 
+	{
+		[originImageView setFrame:Frame];
+		 [self animationDid];
+	 }];
 	
+}
+
+- (void)leftPushAni
+{
+	[self bringSubviewToFront:newImageView];
+	CGRect Frame = newImageView.frame;
+	[newImageView setFrame:CGRectMake(Frame.origin.x-Frame.size.width,Frame.origin.y,Frame.size.width , Frame.size.height)];
+	[self pushInAnimation:Frame orginFrame:CGRectMake(Frame.origin.x+Frame.size.width,Frame.origin.y,Frame.size.width , Frame.size.height)];
+}
+
+- (void)rightPushAni
+{
+	[self bringSubviewToFront:newImageView];
+	CGRect Frame = newImageView.frame;
+	[newImageView setFrame:CGRectMake(Frame.origin.x+Frame.size.width,Frame.origin.y,Frame.size.width , Frame.size.height)];
+	
+	[self pushInAnimation: Frame orginFrame:CGRectMake(Frame.origin.x-Frame.size.width,Frame.origin.y,Frame.size.width , Frame.size.height)];
+}
+
+- (void)topPushAni
+{
+	[self bringSubviewToFront:newImageView];
+	CGRect Frame = newImageView.frame;
+	[newImageView setFrame:CGRectMake(Frame.origin.x,Frame.origin.y-Frame.size.height,Frame.size.width , Frame.size.height)];
+	
+	[self pushInAnimation: Frame orginFrame:CGRectMake(Frame.origin.x,Frame.origin.y+Frame.size.height,Frame.size.width , Frame.size.height)];
+}
+
+- (void)bottomPushAni
+{
+	[self bringSubviewToFront:newImageView];
+	CGRect Frame = newImageView.frame;
+	[newImageView setFrame:CGRectMake(Frame.origin.x,Frame.origin.y+Frame.size.height,Frame.size.width , Frame.size.height)];
+	
+	[self pushInAnimation: Frame orginFrame:CGRectMake(Frame.origin.x,Frame.origin.y-Frame.size.height,Frame.size.width , Frame.size.height)];
+}
+
+
+#pragma mark - movein
+
+- (void)moveInAnimation:(CGRect)Frame  {
 	[UIView animateWithDuration:TRANSITION_DURATION delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^(void) 
 	 {
 		 [newImageView setFrame:Frame];
@@ -100,13 +166,14 @@
 	
 }
 
+
 - (void)leftinAni
 {
 	[self bringSubviewToFront:newImageView];
 	CGRect Frame = newImageView.frame;
 	[newImageView setFrame:CGRectMake(Frame.origin.x-Frame.size.width,Frame.origin.y,Frame.size.width , Frame.size.height)];
 	
-	[self TransImageAnimation: Frame];
+	[self moveInAnimation: Frame];
 }
 
 - (void)rightinAni
@@ -115,7 +182,7 @@
 	CGRect Frame = newImageView.frame;
 	[newImageView setFrame:CGRectMake(Frame.origin.x+Frame.size.width,Frame.origin.y,Frame.size.width , Frame.size.height)];
 	
-	[self TransImageAnimation: Frame];
+	[self moveInAnimation: Frame];
 }
 
 - (void)topinAni
@@ -124,7 +191,7 @@
 	CGRect Frame = newImageView.frame;
 	[newImageView setFrame:CGRectMake(Frame.origin.x,Frame.origin.y-Frame.size.height,Frame.size.width , Frame.size.height)];
 	
-	[self TransImageAnimation: Frame];
+	[self moveInAnimation: Frame];
 }
 
 - (void)bottominAni
@@ -133,16 +200,9 @@
 	CGRect Frame = newImageView.frame;
 	[newImageView setFrame:CGRectMake(Frame.origin.x,Frame.origin.y+Frame.size.height,Frame.size.width , Frame.size.height)];
 	
-	[self TransImageAnimation: Frame];
+	[self moveInAnimation: Frame];
 }
 
-
--(void)performTransition
-{
-	SEL array[] = {@selector(fadeAni),@selector(leftinAni),@selector(rightinAni),@selector(topinAni),@selector(bottominAni)};
-	SEL message = array[arc4random()%5];
-	[self performSelector:message];
-}
 
 -(void)animationDid
 {

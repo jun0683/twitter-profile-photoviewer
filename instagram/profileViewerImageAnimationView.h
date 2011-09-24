@@ -17,6 +17,6 @@
 
 @property (nonatomic,readonly) UIImageView *newImageView;
 - (UIImage*)imageWithrandomColor;
--(void)performTransition;
+-(void)changeImage;
 -(void)animationDid;
 @end

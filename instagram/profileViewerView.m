@@ -79,10 +79,11 @@
 }
 - (void)insertNewImages:(NSArray*)images
 {
-	for (int i = 0; i<[self.subviews count]; i++) {
+	int mincount = [self.subviews count]>[images count]?[images count]:[self.subviews count];
+	for (int i = 0; i<mincount; i++) {
 		profileViewerImageAnimationView *view = [self.subviews objectAtIndex:i];
 		[view.newImageView  setImage:[images objectAtIndex:i]];
-		[view performTransition];
+		[view changeImage];
 	}
 }
 
@@ -93,7 +94,7 @@
 	int choiceviewindex = arc4random()%[self.subviews count];
 	profileViewerImageAnimationView *imageview = [self.subviews objectAtIndex:choiceviewindex];
 	[imageview.newImageView setImage:image];
-	[imageview performTransition];
+	[imageview changeImage];
 	
 	
 	
