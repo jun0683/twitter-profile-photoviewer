@@ -456,9 +456,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "instagram/profileViewer-Prefix.pch";
+				GCC_PREFIX_HEADER = "profileViewer/profileViewer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
-				INFOPLIST_FILE = "instagram/profileViewer-Info.plist";
+				INFOPLIST_FILE = "profileViewer/profileViewer-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Twitter+OAuth/Libraries & Headers\"",
@@ -473,9 +473,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "instagram/profileViewer-Prefix.pch";
+				GCC_PREFIX_HEADER = "profileViewer/profileViewer-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2/**";
-				INFOPLIST_FILE = "instagram/profileViewer-Info.plist";
+				INFOPLIST_FILE = "profileViewer/profileViewer-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Twitter+OAuth/Libraries & Headers\"",
