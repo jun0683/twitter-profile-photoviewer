@@ -10,15 +10,17 @@
 		D30A99E81429D1F00000AE6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30A99E71429D1F00000AE6D /* UIKit.framework */; };
 		D30A99EA1429D1F00000AE6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30A99E91429D1F00000AE6D /* Foundation.framework */; };
 		D30A99EC1429D1F00000AE6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30A99EB1429D1F00000AE6D /* CoreGraphics.framework */; };
-		D30A99F21429D1F10000AE6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D30A99F01429D1F10000AE6D /* InfoPlist.strings */; };
-		D30A99F41429D1F10000AE6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A99F31429D1F10000AE6D /* main.m */; };
-		D30A99F81429D1F10000AE6D /* profileViewerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A99F71429D1F10000AE6D /* profileViewerAppDelegate.m */; };
-		D30A99FB1429D1F10000AE6D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30A99F91429D1F10000AE6D /* MainWindow.xib */; };
-		D30A99FE1429D1F10000AE6D /* profileViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A99FD1429D1F10000AE6D /* profileViewerController.m */; };
-		D30A9A011429D1F10000AE6D /* profileViewerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30A99FF1429D1F10000AE6D /* profileViewerController.xib */; };
-		D30A9A091429D36F0000AE6D /* profileViewerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A9A081429D36F0000AE6D /* profileViewerView.m */; };
-		D30A9A0C1429E9380000AE6D /* profileViewerImageAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D30A9A0B1429E9380000AE6D /* profileViewerImageAnimationView.m */; };
 		D30A9A0E1429F4F80000AE6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30A9A0D1429F4F80000AE6D /* QuartzCore.framework */; };
+		D371AB6D1432D48F0077D570 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D371AB5A1432D48F0077D570 /* InfoPlist.strings */; };
+		D371AB6E1432D48F0077D570 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D371AB5C1432D48F0077D570 /* MainWindow.xib */; };
+		D371AB6F1432D48F0077D570 /* profileViewerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D371AB5E1432D48F0077D570 /* profileViewerController.xib */; };
+		D371AB701432D48F0077D570 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D371AB601432D48F0077D570 /* main.m */; };
+		D371AB711432D48F0077D570 /* profileViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D371AB611432D48F0077D570 /* profileViewer-Info.plist */; };
+		D371AB721432D48F0077D570 /* profileViewerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D371AB641432D48F0077D570 /* profileViewerAppDelegate.m */; };
+		D371AB731432D48F0077D570 /* profileViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371AB661432D48F0077D570 /* profileViewerController.m */; };
+		D371AB741432D48F0077D570 /* profileViewerImageAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D371AB681432D48F0077D570 /* profileViewerImageAnimationView.m */; };
+		D371AB751432D48F0077D570 /* profileViewerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D371AB6A1432D48F0077D570 /* profileViewerView.m */; };
+		D371AB761432D48F0077D570 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D371AB6C1432D48F0077D570 /* UserInfo.m */; };
 		D3C3ACD6142B140A00CB7BC8 /* jQueryInject.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3C3AC9C142B140A00CB7BC8 /* jQueryInject.txt */; };
 		D3C3ACD7142B140A00CB7BC8 /* jQueryInjectLandscape.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3C3AC9D142B140A00CB7BC8 /* jQueryInjectLandscape.txt */; };
 		D3C3ACD8142B140A00CB7BC8 /* libOAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C3AC9E142B140A00CB7BC8 /* libOAuth.a */; };
@@ -40,7 +42,6 @@
 		D3C3ACE8142B140B00CB7BC8 /* SA_OAuthTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C3ACD4142B140A00CB7BC8 /* SA_OAuthTwitterEngine.m */; };
 		D3C3ACE9142B140B00CB7BC8 /* twitter_load.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C3ACD5142B140A00CB7BC8 /* twitter_load.png */; };
 		D3C3ACEC142B163000CB7BC8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C3ACEB142B163000CB7BC8 /* libxml2.dylib */; };
-		D3F76106142C85050019EB9F /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F76105142C85050019EB9F /* UserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,21 +49,23 @@
 		D30A99E71429D1F00000AE6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D30A99E91429D1F00000AE6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D30A99EB1429D1F00000AE6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D30A99EF1429D1F10000AE6D /* profileViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "profileViewer-Info.plist"; sourceTree = "<group>"; };
-		D30A99F11429D1F10000AE6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D30A99F31429D1F10000AE6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D30A99F51429D1F10000AE6D /* profileViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "profileViewer-Prefix.pch"; sourceTree = "<group>"; };
-		D30A99F61429D1F10000AE6D /* profileViewerAppDelegate.h */ = {isa = PBXFileReference; path = profileViewerAppDelegate.h; sourceTree = "<group>"; };
-		D30A99F71429D1F10000AE6D /* profileViewerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = profileViewerAppDelegate.m; sourceTree = "<group>"; };
-		D30A99FA1429D1F10000AE6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		D30A99FC1429D1F10000AE6D /* profileViewerController.h */ = {isa = PBXFileReference; path = profileViewerController.h; sourceTree = "<group>"; };
-		D30A99FD1429D1F10000AE6D /* profileViewerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = profileViewerController.m; sourceTree = "<group>"; };
-		D30A9A001429D1F10000AE6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/profileViewerController.xib; sourceTree = "<group>"; };
-		D30A9A071429D36E0000AE6D /* profileViewerView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = profileViewerView.h; sourceTree = "<group>"; };
-		D30A9A081429D36F0000AE6D /* profileViewerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewerView.m; sourceTree = "<group>"; };
-		D30A9A0A1429E9380000AE6D /* profileViewerImageAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = profileViewerImageAnimationView.h; sourceTree = "<group>"; };
-		D30A9A0B1429E9380000AE6D /* profileViewerImageAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewerImageAnimationView.m; sourceTree = "<group>"; };
 		D30A9A0D1429F4F80000AE6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D371AB5B1432D48F0077D570 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D371AB5D1432D48F0077D570 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		D371AB5F1432D48F0077D570 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/profileViewerController.xib; sourceTree = "<group>"; };
+		D371AB601432D48F0077D570 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D371AB611432D48F0077D570 /* profileViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "profileViewer-Info.plist"; sourceTree = "<group>"; };
+		D371AB621432D48F0077D570 /* profileViewer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "profileViewer-Prefix.pch"; sourceTree = "<group>"; };
+		D371AB631432D48F0077D570 /* profileViewerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewerAppDelegate.h; sourceTree = "<group>"; };
+		D371AB641432D48F0077D570 /* profileViewerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewerAppDelegate.m; sourceTree = "<group>"; };
+		D371AB651432D48F0077D570 /* profileViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewerController.h; sourceTree = "<group>"; };
+		D371AB661432D48F0077D570 /* profileViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewerController.m; sourceTree = "<group>"; };
+		D371AB671432D48F0077D570 /* profileViewerImageAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewerImageAnimationView.h; sourceTree = "<group>"; };
+		D371AB681432D48F0077D570 /* profileViewerImageAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewerImageAnimationView.m; sourceTree = "<group>"; };
+		D371AB691432D48F0077D570 /* profileViewerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileViewerView.h; sourceTree = "<group>"; };
+		D371AB6A1432D48F0077D570 /* profileViewerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileViewerView.m; sourceTree = "<group>"; };
+		D371AB6B1432D48F0077D570 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		D371AB6C1432D48F0077D570 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		D3C3AC9C142B140A00CB7BC8 /* jQueryInject.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInject.txt; sourceTree = "<group>"; };
 		D3C3AC9D142B140A00CB7BC8 /* jQueryInjectLandscape.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jQueryInjectLandscape.txt; sourceTree = "<group>"; };
 		D3C3AC9E142B140A00CB7BC8 /* libOAuth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOAuth.a; sourceTree = "<group>"; };
@@ -119,8 +122,6 @@
 		D3C3ACD4142B140A00CB7BC8 /* SA_OAuthTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SA_OAuthTwitterEngine.m; sourceTree = "<group>"; };
 		D3C3ACD5142B140A00CB7BC8 /* twitter_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_load.png; sourceTree = "<group>"; };
 		D3C3ACEB142B163000CB7BC8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		D3F76104142C85050019EB9F /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
-		D3F76105142C85050019EB9F /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +144,9 @@
 		D30A99D81429D1F00000AE6D = {
 			isa = PBXGroup;
 			children = (
+				D371AB591432D48F0077D570 /* profileViewer */,
 				D3C3ACEB142B163000CB7BC8 /* libxml2.dylib */,
 				D3C3AC9A142B140A00CB7BC8 /* Twitter+OAuth */,
-				D30A99ED1429D1F00000AE6D /* profileViewer */,
 				D30A99E61429D1F00000AE6D /* Frameworks */,
 				D30A99E41429D1F00000AE6D /* Products */,
 			);
@@ -170,37 +171,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D30A99ED1429D1F00000AE6D /* profileViewer */ = {
+		D371AB591432D48F0077D570 /* profileViewer */ = {
 			isa = PBXGroup;
 			children = (
-				D30A99F61429D1F10000AE6D /* profileViewerAppDelegate.h */,
-				D30A99F71429D1F10000AE6D /* profileViewerAppDelegate.m */,
-				D30A99F91429D1F10000AE6D /* MainWindow.xib */,
-				D30A9A0A1429E9380000AE6D /* profileViewerImageAnimationView.h */,
-				D30A9A0B1429E9380000AE6D /* profileViewerImageAnimationView.m */,
-				D30A9A071429D36E0000AE6D /* profileViewerView.h */,
-				D30A9A081429D36F0000AE6D /* profileViewerView.m */,
-				D30A99FC1429D1F10000AE6D /* profileViewerController.h */,
-				D30A99FD1429D1F10000AE6D /* profileViewerController.m */,
-				D30A99FF1429D1F10000AE6D /* profileViewerController.xib */,
-				D30A99EE1429D1F10000AE6D /* Supporting Files */,
-				D3F76104142C85050019EB9F /* UserInfo.h */,
-				D3F76105142C85050019EB9F /* UserInfo.m */,
+				D371AB5A1432D48F0077D570 /* InfoPlist.strings */,
+				D371AB5C1432D48F0077D570 /* MainWindow.xib */,
+				D371AB5E1432D48F0077D570 /* profileViewerController.xib */,
+				D371AB601432D48F0077D570 /* main.m */,
+				D371AB611432D48F0077D570 /* profileViewer-Info.plist */,
+				D371AB621432D48F0077D570 /* profileViewer-Prefix.pch */,
+				D371AB631432D48F0077D570 /* profileViewerAppDelegate.h */,
+				D371AB641432D48F0077D570 /* profileViewerAppDelegate.m */,
+				D371AB651432D48F0077D570 /* profileViewerController.h */,
+				D371AB661432D48F0077D570 /* profileViewerController.m */,
+				D371AB671432D48F0077D570 /* profileViewerImageAnimationView.h */,
+				D371AB681432D48F0077D570 /* profileViewerImageAnimationView.m */,
+				D371AB691432D48F0077D570 /* profileViewerView.h */,
+				D371AB6A1432D48F0077D570 /* profileViewerView.m */,
+				D371AB6B1432D48F0077D570 /* UserInfo.h */,
+				D371AB6C1432D48F0077D570 /* UserInfo.m */,
 			);
-			name = profileViewer;
-			path = instagram;
-			sourceTree = "<group>";
-		};
-		D30A99EE1429D1F10000AE6D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D30A99EF1429D1F10000AE6D /* profileViewer-Info.plist */,
-				D30A99F01429D1F10000AE6D /* InfoPlist.strings */,
-				D30A99F31429D1F10000AE6D /* main.m */,
-				D30A99F51429D1F10000AE6D /* profileViewer-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
+			path = profileViewer;
+			sourceTree = SOURCE_ROOT;
 		};
 		D3C3AC9A142B140A00CB7BC8 /* Twitter+OAuth */ = {
 			isa = PBXGroup;
@@ -343,12 +335,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30A99F21429D1F10000AE6D /* InfoPlist.strings in Resources */,
-				D30A99FB1429D1F10000AE6D /* MainWindow.xib in Resources */,
-				D30A9A011429D1F10000AE6D /* profileViewerController.xib in Resources */,
 				D3C3ACD6142B140A00CB7BC8 /* jQueryInject.txt in Resources */,
 				D3C3ACD7142B140A00CB7BC8 /* jQueryInjectLandscape.txt in Resources */,
 				D3C3ACE9142B140B00CB7BC8 /* twitter_load.png in Resources */,
+				D371AB6D1432D48F0077D570 /* InfoPlist.strings in Resources */,
+				D371AB6E1432D48F0077D570 /* MainWindow.xib in Resources */,
+				D371AB6F1432D48F0077D570 /* profileViewerController.xib in Resources */,
+				D371AB711432D48F0077D570 /* profileViewer-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,11 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30A99F41429D1F10000AE6D /* main.m in Sources */,
-				D30A99F81429D1F10000AE6D /* profileViewerAppDelegate.m in Sources */,
-				D30A99FE1429D1F10000AE6D /* profileViewerController.m in Sources */,
-				D30A9A091429D36F0000AE6D /* profileViewerView.m in Sources */,
-				D30A9A0C1429E9380000AE6D /* profileViewerImageAnimationView.m in Sources */,
 				D3C3ACD9142B140B00CB7BC8 /* MGTwitterEngine.m in Sources */,
 				D3C3ACDA142B140B00CB7BC8 /* MGTwitterHTTPURLConnection.m in Sources */,
 				D3C3ACDB142B140B00CB7BC8 /* MGTwitterLibXMLParser.m in Sources */,
@@ -380,33 +368,38 @@
 				D3C3ACE6142B140B00CB7BC8 /* NSString+UUID.m in Sources */,
 				D3C3ACE7142B140B00CB7BC8 /* SA_OAuthTwitterController.m in Sources */,
 				D3C3ACE8142B140B00CB7BC8 /* SA_OAuthTwitterEngine.m in Sources */,
-				D3F76106142C85050019EB9F /* UserInfo.m in Sources */,
+				D371AB701432D48F0077D570 /* main.m in Sources */,
+				D371AB721432D48F0077D570 /* profileViewerAppDelegate.m in Sources */,
+				D371AB731432D48F0077D570 /* profileViewerController.m in Sources */,
+				D371AB741432D48F0077D570 /* profileViewerImageAnimationView.m in Sources */,
+				D371AB751432D48F0077D570 /* profileViewerView.m in Sources */,
+				D371AB761432D48F0077D570 /* UserInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D30A99F01429D1F10000AE6D /* InfoPlist.strings */ = {
+		D371AB5A1432D48F0077D570 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D30A99F11429D1F10000AE6D /* en */,
+				D371AB5B1432D48F0077D570 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D30A99F91429D1F10000AE6D /* MainWindow.xib */ = {
+		D371AB5C1432D48F0077D570 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D30A99FA1429D1F10000AE6D /* en */,
+				D371AB5D1432D48F0077D570 /* en */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		D30A99FF1429D1F10000AE6D /* profileViewerController.xib */ = {
+		D371AB5E1432D48F0077D570 /* profileViewerController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D30A9A001429D1F10000AE6D /* en */,
+				D371AB5F1432D48F0077D570 /* en */,
 			);
 			name = profileViewerController.xib;
 			sourceTree = "<group>";
